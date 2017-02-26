@@ -8,4 +8,11 @@ public class HelloWorld {
 		return false;
 	}
 	
+
+
+	public static void main(String args[]){
+		if (isHelloWorld("hello WORLD")) {
+			System.out.print("Hello World!");
+		}
+	}
 }
