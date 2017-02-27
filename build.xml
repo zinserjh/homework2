@@ -11,7 +11,7 @@
     <property name="source" value="1.5"/>
     <path id="JUnit 4.libraryclasspath">
 	<pathelement location="plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
-        <pathelement location="org.junit_4.11.0.v201303080030/junit.jar"/"/>
+        <pathelement location="org.junit_4.11.0.v201303080030/junit.jar"/>
     </path>
     <path id="321_homework_2.classpath">
         <pathelement location="bin"/>
