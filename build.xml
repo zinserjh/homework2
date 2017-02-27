@@ -52,4 +52,13 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+
+    <target name="test-reports" depends="test">
+    <junitreport tofile="TESTS-TestSuites.xml" todir="${junit.output.dir}/reports">
+        <fileset dir="${junit.output.dir}">
+            <include name="TEST-*.xml" />
+        </fileset>
+        <report format="frames" todir="${junit.output.dir}/reports" />
+    </junitreport>
+</target>
 </project>
