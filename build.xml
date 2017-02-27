@@ -10,6 +10,7 @@
     <property name="target" value="1.5"/>
     <property name="source" value="1.5"/>
     <path id="JUnit 4.libraryclasspath">
+	<pathelement location="plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
