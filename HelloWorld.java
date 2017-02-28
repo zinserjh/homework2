@@ -2,7 +2,7 @@
 public class HelloWorld {
 	public static boolean isHelloWorld( String in )   {
 		String check = in.toLowerCase();
-		if (check.equals("hello world")) {
+		if (check.equals("Hello World")) { //<- Fault here
 			return true;
 		}
 		return false;
