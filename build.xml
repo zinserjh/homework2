@@ -11,8 +11,8 @@
     <property name="target" value="1.5"/>
     <property name="source" value="1.5"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+	<pathelement location="plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+        <pathelement location="org.junit_4.11.0.v201303080030/junit.jar"/>
     </path>
     <path id="321_homework_2.classpath">
         <pathelement location="bin"/>
@@ -55,7 +55,8 @@
     </target>
     <target name="HelloWorldTest">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
+        <mkdir dir="butts"/>
+	<junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="HelloWorldTest" todir="${junit.output.dir}"/>
             <classpath refid="321_homework_2.classpath"/>
@@ -70,3 +71,4 @@
         </junitreport>
     </target>
 </project>
+
