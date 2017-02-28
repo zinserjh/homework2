@@ -52,7 +52,21 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <junit haltonfailure="no" failureproperty="test.failed">
-    </junit>
-    <fail message="Test failure detected, check test results." if="test.failed" />
+    <target name="HelloWorldTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="HelloWorldTest" todir="${junit.output.dir}"/>
+            <classpath refid="321_homework_2.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
 </project>
+
