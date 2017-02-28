@@ -52,4 +52,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    <junit haltonfailure="no" failureproperty="test.failed">
+    </junit>
+    <fail message="Test failure detected, check test results." if="test.failed" />
 </project>
